@@ -13,9 +13,18 @@
     <ClCompile Include="DoSomething.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_pointer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Auto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DoSomething.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Auto.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

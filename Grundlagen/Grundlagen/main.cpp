@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-void main()
+void main2()
 {
 	printf("Ich bin eine funktion!\n");
 	//printf("asd2\n");
