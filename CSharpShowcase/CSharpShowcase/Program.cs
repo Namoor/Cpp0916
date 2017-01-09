@@ -4,6 +4,13 @@ namespace CSharpShowcase
     class Auto
     {
         int Tanklevel;
+        
+    }
+
+    interface IUpdatable
+    {
+        void Update();
+        void GetUpdateTiming();
     }
 
 

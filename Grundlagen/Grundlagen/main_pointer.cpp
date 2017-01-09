@@ -30,8 +30,15 @@ void main()
 	{
 		Auto* _pAuto = new Auto();
 
+		Fahrzeug* _pFahrzeug = _pAuto;
+
+		_pFahrzeug->Drive();
+
+		cout << _pFahrzeug->GetWheelCount();
+
 		delete _pAuto;
 		_pAuto = nullptr;
+		break;
 	}
 
 	//_pAuto->Drive();

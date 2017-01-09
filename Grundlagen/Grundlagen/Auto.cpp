@@ -21,9 +21,19 @@ Auto::~Auto()
 	}
 }
 
+int Auto::GetWheelCount()
+{
+	return 4;
+}
+
+void Auto::Update()
+{
+
+}
+
 void Auto::Drive()
 {
-	cout << "Das Auto fährt\n";
+	cout << "Das Auto fährt";
 }
 
 void Auto::MakeNoise()
