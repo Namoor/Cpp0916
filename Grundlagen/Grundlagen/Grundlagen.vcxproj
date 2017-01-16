@@ -146,11 +146,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Auto.cpp" />
     <ClCompile Include="DoSomething.cpp" />
+    <ClCompile Include="Fahrzeug.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_pointer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Auto.h" />
     <ClInclude Include="DoSomething.h" />
+    <ClInclude Include="Fahrzeug.h" />
+    <ClInclude Include="IUpdateable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
