@@ -1,7 +1,6 @@
-﻿  Texture.cpp
-  Renderer.cpp
+﻿  Main.cpp
   Generating Code...
-  Compiling...
-  Main.cpp
-  Generating Code...
+  Skipping... (no relevant changes detected)
+  SDLFramework.cpp
+  ShowcaseGame.cpp
   SDLFramework.vcxproj -> F:\Sonntag_Jannik\Cpp0916\SDLFramework\Debug\SDLFramework.exe

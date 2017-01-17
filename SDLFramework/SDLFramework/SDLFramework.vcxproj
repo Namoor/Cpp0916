@@ -153,12 +153,17 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Rect.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="SDLFramework.cpp" />
+    <ClCompile Include="ShowcaseGame.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IGame.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="SDLFramework.h" />
     <ClInclude Include="SDLInclude.h" />
+    <ClInclude Include="ShowcaseGame.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

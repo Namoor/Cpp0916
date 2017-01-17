@@ -19,6 +19,15 @@
     <Filter Include="Source Files\Texture">
       <UniqueIdentifier>{b0d0bb9d-cdd9-48f2-a57d-9bab16d3b27a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ShowcaseGame">
+      <UniqueIdentifier>{0d393636-98cd-4600-bd11-00e543dc18d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDLFramework">
+      <UniqueIdentifier>{d5221897-c5c4-4b13-bb0c-75dbb1d264e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IGame">
+      <UniqueIdentifier>{eee4e9ea-8e0a-464b-9482-31291eda8553}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -33,6 +42,12 @@
     <ClCompile Include="Renderer.cpp">
       <Filter>Source Files\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="ShowcaseGame.cpp">
+      <Filter>Source Files\ShowcaseGame</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLFramework.cpp">
+      <Filter>Source Files\SDLFramework</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SDLInclude.h">
@@ -46,6 +61,15 @@
     </ClInclude>
     <ClInclude Include="Texture.h">
       <Filter>Source Files\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowcaseGame.h">
+      <Filter>Source Files\ShowcaseGame</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLFramework.h">
+      <Filter>Source Files\SDLFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="IGame.h">
+      <Filter>Source Files\IGame</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

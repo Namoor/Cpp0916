@@ -32,6 +32,11 @@ void Renderer::DrawTexture(Texture* p_pTexture, Rect p_SourceRect, Rect p_Destin
 	SDL_RenderCopy(m_pRenderer, p_pTexture->GetTexture(), &p_SourceRect, &p_DestinationRect);
 }
 
+void Renderer::DrawTexture(Texture* p_pTexture, Rect p_DestinationRect)
+{
+	SDL_RenderCopy(m_pRenderer, p_pTexture->GetTexture(), nullptr, &p_DestinationRect);
+}
+
 
 SDL_Renderer* Renderer::GetRenderer()
 {

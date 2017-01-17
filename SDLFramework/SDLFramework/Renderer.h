@@ -16,6 +16,7 @@ public:
 	void Clear();
 	void Present();
 	void DrawTexture(Texture* p_pTexture, Rect p_SourceRect, Rect p_DestinationRect);
+	void DrawTexture(Texture* p_pTexture, Rect p_DestinationRect);
 
 public:
 	SDL_Renderer* GetRenderer();
