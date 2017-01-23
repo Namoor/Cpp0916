@@ -13,63 +13,90 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Renderer">
-      <UniqueIdentifier>{b31f0c8b-1572-45aa-a767-0706eae75ba0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Texture">
-      <UniqueIdentifier>{b0d0bb9d-cdd9-48f2-a57d-9bab16d3b27a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\ShowcaseGame">
       <UniqueIdentifier>{0d393636-98cd-4600-bd11-00e543dc18d1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\SDLFramework">
+    <Filter Include="Source Files\Framework">
+      <UniqueIdentifier>{c211272f-f72b-49c8-a15d-edf2f44fbd15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\IGame">
+      <UniqueIdentifier>{eee4e9ea-8e0a-464b-9482-31291eda8553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Renderer">
+      <UniqueIdentifier>{b31f0c8b-1572-45aa-a767-0706eae75ba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Texture">
+      <UniqueIdentifier>{b0d0bb9d-cdd9-48f2-a57d-9bab16d3b27a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\SDLFramework">
       <UniqueIdentifier>{d5221897-c5c4-4b13-bb0c-75dbb1d264e5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\IGame">
-      <UniqueIdentifier>{eee4e9ea-8e0a-464b-9482-31291eda8553}</UniqueIdentifier>
+    <Filter Include="Source Files\Framework\Helper">
+      <UniqueIdentifier>{da749242-c31c-4068-8ef1-6ac17f78479f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Input">
+      <UniqueIdentifier>{9811344a-ea65-4d8c-b129-640d8c9bccd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Helper\Rect">
+      <UniqueIdentifier>{52767a47-e352-47cd-b1ab-78eb74292a54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Helper\Vector2">
+      <UniqueIdentifier>{ae707a18-d3f6-439c-b2b4-775716430d43}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Texture.cpp">
-      <Filter>Source Files\Texture</Filter>
+      <Filter>Source Files\Framework\Texture</Filter>
     </ClCompile>
     <ClCompile Include="Renderer.cpp">
-      <Filter>Source Files\Renderer</Filter>
+      <Filter>Source Files\Framework\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="ShowcaseGame.cpp">
       <Filter>Source Files\ShowcaseGame</Filter>
     </ClCompile>
     <ClCompile Include="SDLFramework.cpp">
-      <Filter>Source Files\SDLFramework</Filter>
+      <Filter>Source Files\Framework\SDLFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\Framework\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>Source Files\Framework\Helper\Rect</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files\Framework\Helper\Vector2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SDLInclude.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Renderer.h">
-      <Filter>Source Files\Renderer</Filter>
+      <Filter>Source Files\Framework\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
-      <Filter>Source Files\Texture</Filter>
+      <Filter>Source Files\Framework\Texture</Filter>
     </ClInclude>
     <ClInclude Include="ShowcaseGame.h">
       <Filter>Source Files\ShowcaseGame</Filter>
     </ClInclude>
     <ClInclude Include="SDLFramework.h">
-      <Filter>Source Files\SDLFramework</Filter>
+      <Filter>Source Files\Framework\SDLFramework</Filter>
     </ClInclude>
     <ClInclude Include="IGame.h">
-      <Filter>Source Files\IGame</Filter>
+      <Filter>Source Files\Framework\IGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Source Files\Framework\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>Source Files\Framework\Helper\Rect</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Source Files\Framework\Helper\Vector2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

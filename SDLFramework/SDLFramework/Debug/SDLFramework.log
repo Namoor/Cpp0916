@@ -1,6 +1,3 @@
-﻿  Main.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  SDLFramework.cpp
-  ShowcaseGame.cpp
-  SDLFramework.vcxproj -> F:\Sonntag_Jannik\Cpp0916\SDLFramework\Debug\SDLFramework.exe
+﻿  SDLFramework.cpp
+f:\sonntag_jannik\gpd0916\cpp0916\sdlframework\sdlframework\sdlframework.cpp(63): warning C4244: 'initializing': conversion from 'clock_t' to 'float', possible loss of data
+  SDLFramework.vcxproj -> F:\Sonntag_Jannik\GPD0916\Cpp0916\SDLFramework\Debug\SDLFramework.exe
