@@ -15,5 +15,6 @@ public:
 	float Y;
 
 private:
-	Texture* m_pTestTexture;
+	Texture* m_pMarioTexture;
+	Texture* m_pFireballTexture;
 };

@@ -4,6 +4,6 @@
 class Rect : public SDL_Rect
 {
 public:
-	Rect(int x, int y, int h, int w);
+	Rect(int x, int y, int w, int h);
 	Rect();
 };

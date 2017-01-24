@@ -1,6 +1,6 @@
 #include "SDLFramework.h"
 #include <iostream>
-
+#include <SDL_image.h>
 
 
 
@@ -10,14 +10,14 @@ void SDLFramework::Init()
 {
 	if (SDL_Init(SDL_INIT_VIDEO) != 0)
 	{
-		cout << "Error while initializing video";
+		cout << "Error while initializing video\n";
 		return;
 	}
 
 	m_pWindow = SDL_CreateWindow("TestWindow", 50, 50, 800, 600, SDL_WindowFlags::SDL_WINDOW_SHOWN);
 	if (m_pWindow == nullptr)
 	{
-		cout << "Error while initializing window";
+		cout << "Error while initializing window\n";
 		return;
 	}
 
@@ -25,6 +25,13 @@ void SDLFramework::Init()
 	m_pRenderer = new Renderer(m_pWindow);
 
 	m_pInput = new Input();
+
+	if(IMG_Init(IMG_InitFlags::IMG_INIT_JPG | IMG_InitFlags::IMG_INIT_PNG) != (IMG_InitFlags::IMG_INIT_JPG | IMG_InitFlags::IMG_INIT_PNG))
+	{
+		cout << "Error while initializing SDL_image\n";
+		return;
+	}
+
 }
 
 void SDLFramework::Run(IGame* p_pGame)

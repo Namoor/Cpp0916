@@ -7,7 +7,8 @@ void ShowcaseGame::Init(Renderer* p_pRenderer)
 {
 	X = 100;
 	Y = 100;
-	m_pTestTexture = new Texture("TestTexture.bmp", p_pRenderer);
+	m_pMarioTexture = new Texture("Mario.png", p_pRenderer);
+	m_pFireballTexture = new Texture("Fireball.png", p_pRenderer);
 }
 
 void ShowcaseGame::Update(float p_DeltaTime) 
@@ -24,5 +25,7 @@ void ShowcaseGame::Update(float p_DeltaTime)
 
 void ShowcaseGame::Draw(Renderer* p_pRenderer)
 {
-	p_pRenderer->DrawTexture(m_pTestTexture, Rect(X - 10, Y - 10, 20, 20));
+	p_pRenderer->DrawTexture(m_pMarioTexture, Rect(X - 10, Y - 10, 40, 60));
+	//p_pRenderer->DrawTexture(m_pFireballTexture, Rect(X - 10, Y - 10, 300, 261));
+
 }
