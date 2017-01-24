@@ -43,6 +43,9 @@
     <Filter Include="Source Files\Framework\Helper\Vector2">
       <UniqueIdentifier>{ae707a18-d3f6-439c-b2b4-775716430d43}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ShowcaseGame\Fireball">
+      <UniqueIdentifier>{6cfa70d6-917d-4883-8a47-e1c1f46c19cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -68,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="Vector.cpp">
       <Filter>Source Files\Framework\Helper\Vector2</Filter>
+    </ClCompile>
+    <ClCompile Include="Fireball.cpp">
+      <Filter>Source Files\ShowcaseGame\Fireball</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="Vector2.h">
       <Filter>Source Files\Framework\Helper\Vector2</Filter>
+    </ClInclude>
+    <ClInclude Include="Fireball.h">
+      <Filter>Source Files\ShowcaseGame\Fireball</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

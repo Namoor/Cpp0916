@@ -1,3 +1,4 @@
 ﻿  ShowcaseGame.cpp
-f:\sonntag_jannik\gpd0916\cpp0916\sdlframework\sdlframework\showcasegame.cpp(28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+f:\sonntag_jannik\gpd0916\cpp0916\sdlframework\sdlframework\showcasegame.cpp(46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+f:\sonntag_jannik\gpd0916\cpp0916\sdlframework\sdlframework\showcasegame.cpp(63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   SDLFramework.vcxproj -> F:\Sonntag_Jannik\GPD0916\Cpp0916\SDLFramework\Debug\SDLFramework.exe

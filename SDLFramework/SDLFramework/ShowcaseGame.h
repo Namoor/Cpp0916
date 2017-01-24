@@ -3,6 +3,11 @@
 #include "Renderer.h"
 #include "Texture.h"
 #include "IGame.h"
+#include "Vector2.h"
+#include <list>
+#include "Fireball.h"
+
+using namespace std;
 
 class ShowcaseGame : public IGame
 {
@@ -14,7 +19,12 @@ public:
 	float X;
 	float Y;
 
+	list<Fireball*> m_Fireballs;
+
+	float m_TimeToNextFireball;
+
 private:
 	Texture* m_pMarioTexture;
 	Texture* m_pFireballTexture;
+	Renderer* m_pRenderer;
 };

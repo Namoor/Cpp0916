@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fireball.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Rect.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Fireball.h" />
     <ClInclude Include="IGame.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Rect.h" />
