@@ -18,6 +18,13 @@ Texture::Texture(char* p_pFileName, Renderer* p_pRenderer)
 	}
 }
 
+
+
+Texture::~Texture()
+{
+	SDL_DestroyTexture(m_pTexture);
+}
+
 SDL_Texture* Texture::GetTexture()
 {
 	return m_pTexture;

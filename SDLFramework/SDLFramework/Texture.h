@@ -12,6 +12,7 @@ private:
 
 public:
 	Texture(char* p_pFileName, Renderer* p_pRenderer);
+	~Texture();
 
 public:
 	SDL_Texture* GetTexture();

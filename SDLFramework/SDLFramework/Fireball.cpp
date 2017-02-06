@@ -12,6 +12,16 @@ Fireball::Fireball(Renderer* p_pRenderer)
 	m_pFireballTexture = new Texture("Fireball.png", p_pRenderer);
 }
 
+
+Fireball::~Fireball()
+{
+	if (m_pFireballTexture != nullptr)
+	{
+		delete m_pFireballTexture;
+		m_pFireballTexture = nullptr;
+	}
+}
+
 void Fireball::Update(float DeltaTime)
 {
 	Position.X += Direction.X * DeltaTime;

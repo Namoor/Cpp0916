@@ -15,10 +15,14 @@ private:
 
 public:
 	Fireball(Renderer* p_pRenderer);
+	~Fireball();
+
 
 	void Update(float DeltaTime);
 	void Render(Renderer* p_pRenderer);
 
 	Rect GetCollisionRect();
+
+
 
 };

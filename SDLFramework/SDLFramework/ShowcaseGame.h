@@ -6,6 +6,7 @@
 #include "Vector2.h"
 #include <list>
 #include "Fireball.h"
+#include "Player.h"
 
 using namespace std;
 
@@ -16,15 +17,20 @@ public:
 	void Draw(Renderer* p_pRenderer) override;
 	void Update(float p_DeltaTime) override;
 
-	float X;
-	float Y;
+
+	void ResetGame();
+
 
 	list<Fireball*> m_Fireballs;
 
 	float m_TimeToNextFireball;
 
 private:
-	Texture* m_pMarioTexture;
 	Texture* m_pFireballTexture;
 	Renderer* m_pRenderer;
+
+	int LifeCount;
+	Texture* m_pLifeTexture;
+
+	Player* m_pPlayer;
 };
