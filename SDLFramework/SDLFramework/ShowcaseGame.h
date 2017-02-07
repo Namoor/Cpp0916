@@ -8,6 +8,10 @@
 #include "Fireball.h"
 #include "Player.h"
 
+#include "SoundEffect.h"
+
+#include "Font.h"
+
 using namespace std;
 
 class ShowcaseGame : public IGame
@@ -33,4 +37,8 @@ private:
 	Texture* m_pLifeTexture;
 
 	Player* m_pPlayer;
+
+	SoundEffect* Shot;
+
+	Font* m_pFont;
 };

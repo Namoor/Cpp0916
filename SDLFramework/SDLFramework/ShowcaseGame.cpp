@@ -5,7 +5,9 @@
 
 void ShowcaseGame::Init(Renderer* p_pRenderer)
 {
+	m_pFont = new Font("Steelworks Vintage Demo.ttf");
 
+	Shot = new SoundEffect("Shot.wav");
 
 	m_pPlayer = new Player(p_pRenderer);
 
@@ -56,6 +58,7 @@ void ShowcaseGame::Update(float p_DeltaTime)
 			{
 				LifeCount--;
 				_ToDelete.push_back(_Fireball);
+				//Shot->Play();
 			}
 		}
 
@@ -79,6 +82,8 @@ void ShowcaseGame::ResetGame()
 {
 	LifeCount = 3;
 
+	
+
 
 	for each(Fireball* _Fireball in m_Fireballs)
 	{
@@ -90,6 +95,12 @@ void ShowcaseGame::ResetGame()
 
 void ShowcaseGame::Draw(Renderer* p_pRenderer)
 {
+	SDL_Color TextColor;
+	TextColor.r = 255;
+	TextColor.g = 255;
+	TextColor.b = 255;
+	TextColor.a = 255;
+
 	// Character zeichnen
 	m_pPlayer->Draw(p_pRenderer);
 
@@ -102,6 +113,11 @@ void ShowcaseGame::Draw(Renderer* p_pRenderer)
 	for each(Fireball* _Fireball in m_Fireballs)
 	{
 		_Fireball->Render(p_pRenderer);
+	}
+	for (int x = 0; x < 500; x++)
+	{
+		p_pRenderer->DrawText(m_pFont, "the quick brown fox jumps over the lazy dog", TextColor, 200, 200 + x);
+		//p_pRenderer->DrawText(m_pFont, "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", TextColor, 200, 300);
 	}
 
 	//for (auto _It = m_Fireballs.begin();_It != m_Fireballs.end();_It++)

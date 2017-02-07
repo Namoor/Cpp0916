@@ -1,14 +1,13 @@
 #include "SDLFramework.h"
 #include <iostream>
 #include <SDL_image.h>
-
-
+#include <SDL_ttf.h>
 
 using namespace std;
 
 void SDLFramework::Init()
 {
-	if (SDL_Init(SDL_INIT_VIDEO) != 0)
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) != 0)
 	{
 		cout << "Error while initializing video\n";
 		return;
@@ -32,7 +31,12 @@ void SDLFramework::Init()
 		return;
 	}
 
+
+	TTF_Init();
+
 }
+
+
 
 void SDLFramework::Run(IGame* p_pGame)
 {

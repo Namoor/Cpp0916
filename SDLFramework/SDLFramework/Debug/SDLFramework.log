@@ -1,11 +1,12 @@
-﻿Build started 06.02.2017 17:41:36.
+﻿Build started 07.02.2017 11:18:07.
      1>Project "D:\Jannik Sonntag\Cpp0916\SDLFramework\SDLFramework\SDLFramework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt SpriteSheetAnimation.cpp
-         SpriteSheetAnimation.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ShowcaseGame.cpp
+         ShowcaseGame.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Jannik Sonntag\Cpp0916\SDLFramework\Debug\SDLFramework.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Jannik Sonntag\Cpp0916\SDLFramework\Debug\SDLFramework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Jannik Sonntag\Cpp0916\SDLFramework\Debug\SDLFramework.lib" /MACHINE:X86 Debug\AnimationClip.obj
          Debug\Fireball.obj
+         Debug\Font.obj
          Debug\Input.obj
          Debug\Main.obj
          Debug\Player.obj
@@ -13,6 +14,7 @@
          Debug\Renderer.obj
          Debug\SDLFramework.obj
          Debug\ShowcaseGame.obj
+         Debug\SoundEffect.obj
          Debug\SpriteSheetAnimation.obj
          Debug\Texture.obj
          Debug\Vector.obj
@@ -21,4 +23,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.83
+Time Elapsed 00:00:01.18

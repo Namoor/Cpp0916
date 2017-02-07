@@ -55,6 +55,12 @@
     <Filter Include="Source Files\Framework\SpriteSheetAnimation\AnimationClip">
       <UniqueIdentifier>{54fbe079-6ba1-4c1b-9ad8-b1b137175762}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Framework\SoundEffect">
+      <UniqueIdentifier>{e860fd9d-c3d9-4393-b2d8-6d81adafd156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Font">
+      <UniqueIdentifier>{51debe81-6cf4-4b95-955e-a3cac9942eba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -92,6 +98,12 @@
     </ClCompile>
     <ClCompile Include="AnimationClip.cpp">
       <Filter>Source Files\Framework\SpriteSheetAnimation\AnimationClip</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundEffect.cpp">
+      <Filter>Source Files\Framework\SoundEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\Framework\Font</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +145,12 @@
     </ClInclude>
     <ClInclude Include="AnimationClip.h">
       <Filter>Source Files\Framework\SpriteSheetAnimation\AnimationClip</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEffect.h">
+      <Filter>Source Files\Framework\SoundEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Source Files\Framework\Font</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

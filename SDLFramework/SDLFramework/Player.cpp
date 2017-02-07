@@ -64,5 +64,5 @@ void Player::Update(float p_DeltaTime)
 
 Rect Player::GetCollisionRect()
 {
-	return Rect(X, Y, 80, 80);
+	return Rect(X, Y, 40, 40);
 }
