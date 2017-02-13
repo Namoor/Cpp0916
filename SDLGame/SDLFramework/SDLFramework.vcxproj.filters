@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ShowcaseGame">
+      <UniqueIdentifier>{0d393636-98cd-4600-bd11-00e543dc18d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework">
+      <UniqueIdentifier>{c211272f-f72b-49c8-a15d-edf2f44fbd15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\IGame">
+      <UniqueIdentifier>{eee4e9ea-8e0a-464b-9482-31291eda8553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Renderer">
+      <UniqueIdentifier>{b31f0c8b-1572-45aa-a767-0706eae75ba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Texture">
+      <UniqueIdentifier>{b0d0bb9d-cdd9-48f2-a57d-9bab16d3b27a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\SDLFramework">
+      <UniqueIdentifier>{d5221897-c5c4-4b13-bb0c-75dbb1d264e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Helper">
+      <UniqueIdentifier>{da749242-c31c-4068-8ef1-6ac17f78479f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Input">
+      <UniqueIdentifier>{9811344a-ea65-4d8c-b129-640d8c9bccd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Helper\Rect">
+      <UniqueIdentifier>{52767a47-e352-47cd-b1ab-78eb74292a54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Helper\Vector2">
+      <UniqueIdentifier>{ae707a18-d3f6-439c-b2b4-775716430d43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ShowcaseGame\Fireball">
+      <UniqueIdentifier>{6cfa70d6-917d-4883-8a47-e1c1f46c19cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ShowcaseGame\Player">
+      <UniqueIdentifier>{2d376220-17a5-4692-a0dc-4c0c293f8f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\SpriteSheetAnimation">
+      <UniqueIdentifier>{66ef4100-70f8-4a93-ab2b-923ed020007a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\SpriteSheetAnimation\AnimationClip">
+      <UniqueIdentifier>{54fbe079-6ba1-4c1b-9ad8-b1b137175762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\SoundEffect">
+      <UniqueIdentifier>{e860fd9d-c3d9-4393-b2d8-6d81adafd156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Font">
+      <UniqueIdentifier>{51debe81-6cf4-4b95-955e-a3cac9942eba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\Framework\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowcaseGame.cpp">
+      <Filter>Source Files\ShowcaseGame</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLFramework.cpp">
+      <Filter>Source Files\Framework\SDLFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\Framework\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>Source Files\Framework\Helper\Rect</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files\Framework\Helper\Vector2</Filter>
+    </ClCompile>
+    <ClCompile Include="Fireball.cpp">
+      <Filter>Source Files\ShowcaseGame\Fireball</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\ShowcaseGame\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteSheetAnimation.cpp">
+      <Filter>Source Files\Framework\SpriteSheetAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationClip.cpp">
+      <Filter>Source Files\Framework\SpriteSheetAnimation\AnimationClip</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundEffect.cpp">
+      <Filter>Source Files\Framework\SoundEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\Framework\Font</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDLInclude.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Source Files\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Source Files\Framework\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowcaseGame.h">
+      <Filter>Source Files\ShowcaseGame</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLFramework.h">
+      <Filter>Source Files\Framework\SDLFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="IGame.h">
+      <Filter>Source Files\Framework\IGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Source Files\Framework\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>Source Files\Framework\Helper\Rect</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Source Files\Framework\Helper\Vector2</Filter>
+    </ClInclude>
+    <ClInclude Include="Fireball.h">
+      <Filter>Source Files\ShowcaseGame\Fireball</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Source Files\ShowcaseGame\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteSheetAnimation.h">
+      <Filter>Source Files\Framework\SpriteSheetAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationClip.h">
+      <Filter>Source Files\Framework\SpriteSheetAnimation\AnimationClip</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEffect.h">
+      <Filter>Source Files\Framework\SoundEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Source Files\Framework\Font</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{a5297c67-db81-450f-8609-aa6e24f0ef77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Framework\Animation">
+      <UniqueIdentifier>{09de2381-7be7-4654-8110-3d0d8230671d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Render2D">
+      <UniqueIdentifier>{de717fd4-7f05-47c0-bd94-759632bd7ebb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Core">
+      <UniqueIdentifier>{846f4b54-2ab0-43c9-a2aa-2b680907c1f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Input">
+      <UniqueIdentifier>{edb2ddf1-bda4-4632-a5c2-17c97d153ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Sound">
+      <UniqueIdentifier>{a5598e45-46f8-4d95-8e45-c3b317cdb3f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\MathHelper">
+      <UniqueIdentifier>{2c5fbf8b-1a61-4378-b159-532b8c47a942}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnimationClip.cpp">
+      <Filter>Framework\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Framework\Render2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Framework\Render2D</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLFramework.cpp">
+      <Filter>Framework\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Framework\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundEffect.cpp">
+      <Filter>Framework\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteSheetAnimation.cpp">
+      <Filter>Framework\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Framework\Render2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Framework\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>Framework\MathHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Framework\MathHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLGame.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimationClip.h">
+      <Filter>Framework\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Framework\Render2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Framework\Render2D</Filter>
+    </ClInclude>
+    <ClInclude Include="IGame.h">
+      <Filter>Framework\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLFramework.h">
+      <Filter>Framework\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLInclude.h">
+      <Filter>Framework\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Framework\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEffect.h">
+      <Filter>Framework\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteSheetAnimation.h">
+      <Filter>Framework\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Framework\Render2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>Framework\MathHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Framework\MathHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLGame.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

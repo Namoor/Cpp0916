@@ -43,7 +43,7 @@ public:
 		{
 			b2BodyDef bd;
 			b2Body* ground = m_world->CreateBody(&bd);
-
+		
 			b2EdgeShape shape;
 			shape.Set(b2Vec2(-8.0f, 1.0f), b2Vec2(-6.0f, 1.0f));
 			ground->CreateFixture(&shape, 0.0f);
