@@ -4,6 +4,8 @@
 
 #include <Box2D\Box2D.h>
 
+#include "LevelSection.h"
+
 class SDLGame : public IGame
 {
 	void Init(Renderer* p_pRenderer) override;
@@ -15,6 +17,9 @@ private:
 
 	b2Body* TestBody;
 	b2Body* TestLevel;
+	b2Body* TestLevel2;
+
+	LevelSection* m_pTestSection;
 
 	Texture* m_pTestTexture;
 };

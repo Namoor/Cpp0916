@@ -26,6 +26,15 @@
     <Filter Include="Framework\MathHelper">
       <UniqueIdentifier>{2c5fbf8b-1a61-4378-b159-532b8c47a942}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\LevelSection">
+      <UniqueIdentifier>{72ef72e7-f5f8-40af-8aab-0c7d343e0d69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\LevelSection\BackgroundObject">
+      <UniqueIdentifier>{5b647a4e-6dd1-455c-8784-b0095d3f1996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\LevelSection\GridObject">
+      <UniqueIdentifier>{35f4b606-afae-4519-84ba-37a77fc06159}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimationClip.cpp">
@@ -63,6 +72,15 @@
     </ClCompile>
     <ClCompile Include="SDLGame.cpp">
       <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelSection.cpp">
+      <Filter>Game\LevelSection</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundObject.cpp">
+      <Filter>Game\LevelSection\BackgroundObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GridObject.cpp">
+      <Filter>Game\LevelSection\GridObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +122,15 @@
     </ClInclude>
     <ClInclude Include="SDLGame.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelSection.h">
+      <Filter>Game\LevelSection</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundObject.h">
+      <Filter>Game\LevelSection\BackgroundObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GridObject.h">
+      <Filter>Game\LevelSection\GridObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
