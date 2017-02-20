@@ -1,0 +1,20 @@
+﻿Build started 13.02.2017 10:20:14.
+     1>Project "D:\Jannik Sonntag\Cpp0916\Box2D-master\Box2D\Build\vs2015\imgui.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I../.. /ZI /nologo /W3 /WX- /Od /Oy- /D GLEW_STATIC /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\imgui.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\imgui\imgui.cpp ..\..\imgui\imgui_demo.cpp ..\..\imgui\imgui_draw.cpp ..\..\imgui\imgui_impl_glfw_gl3.cpp
+         imgui_impl_glfw_gl3.cpp
+         imgui_draw.cpp
+         imgui_demo.cpp
+         imgui.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"D:\Jannik Sonntag\Cpp0916\Box2D-master\Box2D\Build\vs2015\Debug\imgui.lib" /NOLOGO Debug\imgui.obj
+         Debug\imgui_demo.obj
+         Debug\imgui_draw.obj
+         Debug\imgui_impl_glfw_gl3.obj
+         imgui.vcxproj -> D:\Jannik Sonntag\Cpp0916\Box2D-master\Box2D\Build\vs2015\Debug\imgui.lib
+     1>Done Building Project "D:\Jannik Sonntag\Cpp0916\Box2D-master\Box2D\Build\vs2015\imgui.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.39

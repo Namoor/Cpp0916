@@ -35,6 +35,12 @@
     <Filter Include="Game\LevelSection\GridObject">
       <UniqueIdentifier>{35f4b606-afae-4519-84ba-37a77fc06159}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\LevelSection\LayeredgridObject">
+      <UniqueIdentifier>{aceab4d1-be47-4821-aa01-bb9b59538011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Level">
+      <UniqueIdentifier>{4a9bbaaf-eb8d-48e6-b670-c640a6835983}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimationClip.cpp">
@@ -81,6 +87,12 @@
     </ClCompile>
     <ClCompile Include="GridObject.cpp">
       <Filter>Game\LevelSection\GridObject</Filter>
+    </ClCompile>
+    <ClCompile Include="LayeredGridObject.cpp">
+      <Filter>Game\LevelSection\LayeredgridObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Game\Level</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +143,12 @@
     </ClInclude>
     <ClInclude Include="GridObject.h">
       <Filter>Game\LevelSection\GridObject</Filter>
+    </ClInclude>
+    <ClInclude Include="LayeredGridObject.h">
+      <Filter>Game\LevelSection\LayeredgridObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Game\Level</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

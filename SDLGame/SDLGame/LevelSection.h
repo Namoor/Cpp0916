@@ -8,7 +8,7 @@
 class LevelSection
 {
 public:
-	void Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace);
+	void Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace, Texture* p_pTextureAtlas, char* LevelName, int XSection, int YSection);
 
 	void Update(float DeltaTime);
 
@@ -18,4 +18,6 @@ private:
 	Texture* m_pTextureAtlas;
 
 	std::list<BackgroundObject*> m_Objects;
+	int m_XSection;
+	int m_YSection;
 };

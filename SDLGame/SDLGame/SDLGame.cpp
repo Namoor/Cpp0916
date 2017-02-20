@@ -6,6 +6,8 @@
 
 void SDLGame::Init(Renderer* p_pRenderer)
 {
+	WaterOverlapCount = 0;
+
 	m_pTestTexture = new Texture("Test.png", p_pRenderer);
 
 	b2Vec2 gravity(0, 9.81f);
@@ -39,19 +41,25 @@ void SDLGame::Init(Renderer* p_pRenderer)
 		_Fixture.shape = &_Shape;
 		_Fixture.density = 10;
 		_Fixture.friction = 0;
+		_Fixture.filter.maskBits = 1;
+
 		TestBody->CreateFixture(&_Fixture);
 
-		//b2PolygonShape _Trigger;
-		//_Trigger.SetAsBox(0.4f, 0.4f);
+		b2PolygonShape _Trigger;
+		_Trigger.SetAsBox(0.4f, 0.4f);
 
-		//b2FixtureDef _TriggerFixture;
-		//_TriggerFixture.isSensor = true;
-		//_TriggerFixture.shape = &_Trigger;
-		//TestBody->CreateFixture(&_TriggerFixture);
+		b2FixtureDef _TriggerFixture;
+		_TriggerFixture.isSensor = true;
+		_TriggerFixture.density = 0;
+		_TriggerFixture.shape = &_Trigger;
+		_TriggerFixture.filter.maskBits = 2;
+		TestBody->CreateFixture(&_TriggerFixture);
 	}
 
+	m_pPhysicsSpace->SetContactListener(this);
+	
 
-	m_pTestSection = new LevelSection();
+	m_pTestSection = new Level();
 	m_pTestSection->Init(p_pRenderer, m_pPhysicsSpace);
 
 	//{
@@ -88,6 +96,28 @@ void SDLGame::Init(Renderer* p_pRenderer)
 
 }
 
+void SDLGame::BeginContact(b2Contact* contact)
+{
+	b2Fixture* _FixtureA = contact->GetFixtureA();
+	b2Fixture* _FixtureB = contact->GetFixtureB();
+
+	if (_FixtureA->IsSensor() || _FixtureB->IsSensor())
+	{
+		WaterOverlapCount++;
+	}
+}
+
+void SDLGame::EndContact(b2Contact* contact)
+{
+	b2Fixture* _FixtureA = contact->GetFixtureA();
+	b2Fixture* _FixtureB = contact->GetFixtureB();
+
+	if (_FixtureA->IsSensor() || _FixtureB->IsSensor())
+	{
+		WaterOverlapCount--;
+	}
+}
+
 void SDLGame::Update(float p_DeltaTime)
 {
 	if (p_DeltaTime > 0.1f)
@@ -99,7 +129,7 @@ void SDLGame::Update(float p_DeltaTime)
 	b2Vec2 _Vel = TestBody->GetLinearVelocity();
 	_Vel.x = 0;
 
-	if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_B))
+	if (WaterOverlapCount > 0)
 	{
 		_Vel.y *= 0.9f;
 		if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_W))
@@ -110,12 +140,12 @@ void SDLGame::Update(float p_DeltaTime)
 
 	if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_D))
 	{
-		_Vel.x = 2;
+		_Vel.x = 3;
 	}
 
 	if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_A))
 	{
-		_Vel.x = -2;
+		_Vel.x = -3;
 	}
 
 	if (Input::IsKeyPressed(SDL_Scancode::SDL_SCANCODE_SPACE) && _Vel.y > -0.1f &&_Vel.y < 0.1f)

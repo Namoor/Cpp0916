@@ -1,5 +1,6 @@
 #pragma once
 #include "Renderer.h"
+#include "Texture.h"
 #include <Box2D\Box2D.h>
 
 class BackgroundObject

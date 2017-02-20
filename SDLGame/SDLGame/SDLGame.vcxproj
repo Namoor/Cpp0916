@@ -157,6 +157,8 @@
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="GridObject.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LayeredGridObject.cpp" />
+    <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelSection.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Rect.cpp" />
@@ -175,6 +177,8 @@
     <ClInclude Include="GridObject.h" />
     <ClInclude Include="IGame.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="LayeredGridObject.h" />
+    <ClInclude Include="Level.h" />
     <ClInclude Include="LevelSection.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />

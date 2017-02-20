@@ -1,10 +1,14 @@
 #include "LevelSection.h"
 #include "GridObject.h"
+#include "LayeredGridObject.h"
 
-void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace)
+void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace, Texture* p_pTextureAtlas, char* LevelName, int XSection, int YSection)
 {
-	m_pTextureAtlas = new Texture("Tileset.png", p_pRenderer);
+	m_pTextureAtlas = p_pTextureAtlas;
 	int i = 0;
+
+	m_XSection = XSection;
+	m_YSection = YSection;
 
 	//while (i++ < 32)
 	//	m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 12, 1, i, 4, true));
@@ -28,7 +32,7 @@ void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace)
 	// 000 / 000 / 255 Water
 	// 000 / 128 / 255 WaterWithStone
 	// 255 / 255 / 255 Nothing
-	SDL_Surface* _Surface = SDL_LoadBMP("Level0.bmp");
+	SDL_Surface* _Surface = SDL_LoadBMP(LevelName);
 
 	unsigned char* _TexData = (unsigned char*)_Surface->pixels;
 
@@ -50,17 +54,17 @@ void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace)
 			// Stone
 			if (R == 255 && G == 0 && B == 0)
 			{
-				m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 12 + rand() % 4, 1, x, y, true));
+				m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 12 + rand() % 4, 1, XSection + x, YSection + y, true));
 			}
 			// DarkStone
 			if (R == 255 && G == 255 && B == 0)
 			{
-				m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 6 + rand() % 5, 2, x, y, true));
+				m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 6 + rand() % 5, 2, XSection + x, YSection + y, true));
 			}
 			// Obsidian
 			if (R == 0 && G == 255 && B == 255)
 			{
-				m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 1 + rand() % 5, 1, x, y, true));
+				m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 1 + rand() % 5, 1, XSection + x, YSection + y, true));
 			}
 
 
@@ -68,17 +72,17 @@ void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace)
 			if (R == 0 && G == 128 && B == 255)
 			{
 				if (RAbove == 0 && GAbove == 128 && BAbove && 255)
-					m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 2 + rand() % 4, 4, x, y, false));
+					m_Objects.push_back(new LayeredGridObject(m_pTextureAtlas, p_pPhysicsSpace, 2 + rand() % 4, 4, XSection + x, YSection + y, 2));
 				else
-					m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 2 + rand() % 4, 3, x, y, false));
+					m_Objects.push_back(new LayeredGridObject(m_pTextureAtlas, p_pPhysicsSpace, 2 + rand() % 4, 3, XSection + x, YSection + y, 2));
 			}
 			// Water
 			if (R == 0 && G == 0 && B == 255)
 			{
 				if (RAbove == 0 && GAbove == 0 && BAbove && 255)
-					m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 1, 4, x, y, false));
+					m_Objects.push_back(new LayeredGridObject(m_pTextureAtlas, p_pPhysicsSpace, 1, 4, XSection + x, YSection + y, 2));
 				else
-					m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 1, 3, x, y, false));
+					m_Objects.push_back(new LayeredGridObject(m_pTextureAtlas, p_pPhysicsSpace, 1, 3, XSection + x, YSection + y, 2));
 			}
 
 			// Dirt
@@ -87,18 +91,18 @@ void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace)
 				if (RAbove == 255 && GAbove == 255 && BAbove == 255)
 				{
 					srand(x);
-					m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 2 + rand() % 4, 2, x, y, true));
+					m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 2 + rand() % 4, 2, XSection + x, YSection + y, true));
 				}
 				else
 					if (RBelow == 0 && GBelow == 255 && BBelow == 0)
 					{
 						srand(x);
-						m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 3 + rand() % 4, 0, x, y, true));
+						m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 3 + rand() % 4, 0, XSection + x, YSection + y, true));
 					}
 					else
 					{
 						srand(x);
-						m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 8 + rand() % 4, 0, x, y, true));
+						m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 8 + rand() % 4, 0, XSection + x, YSection + y, true));
 					}
 			}
 
@@ -108,16 +112,16 @@ void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace)
 				{
 					if (RBelow == 255 && GBelow == 000 && BBelow == 255)
 					{
-						m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 10, 1, x, y, true));
+						m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 10, 1, XSection + x, YSection + y, true));
 					}
 					else
 					{
-						m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 11, 1, x, y, true));
+						m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 11, 1, XSection + x, YSection + y, true));
 					}
 				}
 				else
 				{
-					m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 9, 1, x, y, true));
+					m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 9, 1, XSection + x, YSection + y, true));
 				}
 			}
 			

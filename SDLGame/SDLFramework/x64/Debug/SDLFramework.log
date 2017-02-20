@@ -1,0 +1,38 @@
+﻿Build started 13.02.2017 09:50:30.
+     1>Project "D:\Jannik Sonntag\Cpp0916\SDLGame\SDLFramework\SDLFramework.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (SDLGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt AnimationClip.cpp Fireball.cpp Font.cpp Input.cpp Main.cpp Player.cpp Rect.cpp Renderer.cpp SDLFramework.cpp ShowcaseGame.cpp SoundEffect.cpp SpriteSheetAnimation.cpp Texture.cpp Vector.cpp
+         Texture.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         SpriteSheetAnimation.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         SoundEffect.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         ShowcaseGame.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         SDLFramework.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         Renderer.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         Rect.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         Player.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         Main.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         Input.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         Font.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\font.h(3): fatal error C1083: Cannot open include file: 'SDL_ttf.h': No such file or directory
+         Fireball.cpp
+     1>d:\jannik sonntag\cpp0916\sdlgame\sdlframework\sdlinclude.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Vector.cpp
+         AnimationClip.cpp
+     1>Done Building Project "D:\Jannik Sonntag\Cpp0916\SDLGame\SDLFramework\SDLFramework.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.22
