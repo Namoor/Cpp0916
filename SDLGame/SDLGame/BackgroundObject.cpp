@@ -11,7 +11,7 @@ BackgroundObject::BackgroundObject(Texture* p_pTexture, b2World* p_pPhysicsSpace
 	{
 		b2BodyDef _Def;
 		_Def.position.Set((Destination.x + Destination.w / 2.0f) / 64.0f, (Destination.y + Destination.h / 2.0f) / 64.0f);
-		b2Body* _Object = p_pPhysicsSpace->CreateBody(&_Def);
+		_Object = p_pPhysicsSpace->CreateBody(&_Def);
 
 
 		b2PolygonShape _Shape;
@@ -22,6 +22,19 @@ BackgroundObject::BackgroundObject(Texture* p_pTexture, b2World* p_pPhysicsSpace
 		_Fixture.density = 10;
 		
 		_Object->CreateFixture(&_Fixture);
+	}
+	else
+	{
+		_Object = nullptr;
+	}
+}
+
+
+BackgroundObject::~BackgroundObject()
+{
+	if (_Object != nullptr)
+	{
+		_Object->GetWorld()->DestroyBody(_Object);
 	}
 }
 

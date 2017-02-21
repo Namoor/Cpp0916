@@ -10,8 +10,12 @@ public:
 
 	void Draw(Renderer* p_pRenderer, b2Vec2 p_Camera);
 
+	~BackgroundObject();
+
 private:
 	Texture* m_pTexture;
 	Rect Source;
 	Rect Destination;
+protected:
+	b2Body* _Object;
 };

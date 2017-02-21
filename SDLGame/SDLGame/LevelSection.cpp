@@ -2,13 +2,24 @@
 #include "GridObject.h"
 #include "LayeredGridObject.h"
 
-void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace, Texture* p_pTextureAtlas, char* LevelName, int XSection, int YSection)
+
+LevelSection::~LevelSection()
+{
+	for (auto _It = m_Objects.begin(); _It != m_Objects.end(); _It++)
+	{
+		delete *_It;
+	}
+}
+
+void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace, Texture* p_pTextureAtlas, char* LevelNameold, int XSection, int YSection, int Mask)
 {
 	m_pTextureAtlas = p_pTextureAtlas;
 	int i = 0;
 
 	m_XSection = XSection;
 	m_YSection = YSection;
+
+	EntranceMask = Mask;
 
 	//while (i++ < 32)
 	//	m_Objects.push_back(new GridObject(m_pTextureAtlas, p_pPhysicsSpace, 12, 1, i, 4, true));
@@ -32,6 +43,47 @@ void LevelSection::Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace, Texture
 	// 000 / 000 / 255 Water
 	// 000 / 128 / 255 WaterWithStone
 	// 255 / 255 / 255 Nothing
+
+	int VariationCount[16];
+	VariationCount[0] = 1;
+	VariationCount[1] = 1;
+	VariationCount[2] = 1;
+	VariationCount[3] = 1;
+	VariationCount[4] = 1;
+	VariationCount[5] = 1;
+	VariationCount[6] = 1;
+	VariationCount[7] = 1;
+	VariationCount[8] = 1;
+	VariationCount[9] = 1;
+	VariationCount[10] = 1;
+	VariationCount[11] = 1;
+	VariationCount[12] = 1;
+	VariationCount[13] = 1;
+	VariationCount[14] = 1;
+	VariationCount[15] = 2;
+
+	int Variation = rand() % VariationCount[Mask];
+	
+	char LevelName[16];
+	LevelName[0] = 'L';
+	LevelName[1] = 'e';
+	LevelName[2] = 'v';
+	LevelName[3] = 'e';
+	LevelName[4] = 'l';
+
+	LevelName[5] = (Mask & 8) != 0 ? '1' : '0';
+	LevelName[6] = (Mask & 4) != 0 ? '1' : '0';
+	LevelName[7] = (Mask & 2) != 0 ? '1' : '0';
+	LevelName[8] = (Mask & 1) != 0 ? '1' : '0';
+
+	LevelName[9] = 'V';
+	LevelName[10] = 48 + Variation;
+
+	LevelName[11] = '.';
+	LevelName[12] = 'b';
+	LevelName[13] = 'm';
+	LevelName[14] = 'p';
+	LevelName[15] = 0;
 	SDL_Surface* _Surface = SDL_LoadBMP(LevelName);
 
 	unsigned char* _TexData = (unsigned char*)_Surface->pixels;

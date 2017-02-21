@@ -8,11 +8,13 @@
 class LevelSection
 {
 public:
-	void Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace, Texture* p_pTextureAtlas, char* LevelName, int XSection, int YSection);
+	void Init(Renderer* p_pRenderer, b2World* p_pPhysicsSpace, Texture* p_pTextureAtlas, char* LevelName, int XSection, int YSection, int EntranceMask);
 
 	void Update(float DeltaTime);
 
 	void Draw(Renderer* p_pRenderer, b2Vec2 CameraPosition);
+
+	~LevelSection();
 
 private:
 	Texture* m_pTextureAtlas;
@@ -20,4 +22,7 @@ private:
 	std::list<BackgroundObject*> m_Objects;
 	int m_XSection;
 	int m_YSection;
+
+public:
+	int EntranceMask;
 };

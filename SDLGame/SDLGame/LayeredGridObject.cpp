@@ -9,7 +9,7 @@ LayeredGridObject::LayeredGridObject(Texture* p_pTexture, b2World* p_pPhysicsSpa
 
 	b2BodyDef _Def;
 	_Def.position.Set((Destination.x + Destination.w / 2.0f) / 64.0f, (Destination.y + Destination.h / 2.0f) / 64.0f);
-	b2Body* _Object = p_pPhysicsSpace->CreateBody(&_Def);
+	_Object = p_pPhysicsSpace->CreateBody(&_Def);
 
 
 	b2PolygonShape _Shape;

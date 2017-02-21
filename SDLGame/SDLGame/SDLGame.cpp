@@ -23,16 +23,17 @@ void SDLGame::Init(Renderer* p_pRenderer)
 
 		TestBody = m_pPhysicsSpace->CreateBody(&_Def);
 
+
 		b2PolygonShape _Shape;
 		b2Vec2 ShapePoints[8];
-		ShapePoints[0] = b2Vec2(0.45f, 0.5f);
-		ShapePoints[1] = b2Vec2(0.5f, 0.1f);
-		ShapePoints[2] = b2Vec2(0.5f, -0.1f);
-		ShapePoints[3] = b2Vec2(0.45f, -0.5f);
-		ShapePoints[4] = b2Vec2(-0.45f, -0.5f);
-		ShapePoints[5] = b2Vec2(-0.5f, -0.1f);
-		ShapePoints[6] = b2Vec2(-0.5f, 0.1f);
-		ShapePoints[7] = b2Vec2(-0.45f, 0.5f);
+		ShapePoints[0] = b2Vec2(0.4f, 0.5f);
+		ShapePoints[1] = b2Vec2(0.45f, 0.1f);
+		ShapePoints[2] = b2Vec2(0.45f, -0.1f);
+		ShapePoints[3] = b2Vec2(0.4f, -0.5f);
+		ShapePoints[4] = b2Vec2(-0.4f, -0.5f);
+		ShapePoints[5] = b2Vec2(-0.45f, -0.1f);
+		ShapePoints[6] = b2Vec2(-0.45f, 0.1f);
+		ShapePoints[7] = b2Vec2(-0.4f, 0.5f);
 
 
 		_Shape.Set(ShapePoints, 8);
@@ -44,6 +45,7 @@ void SDLGame::Init(Renderer* p_pRenderer)
 		_Fixture.filter.maskBits = 1;
 
 		TestBody->CreateFixture(&_Fixture);
+
 
 		b2PolygonShape _Trigger;
 		_Trigger.SetAsBox(0.4f, 0.4f);
@@ -57,7 +59,7 @@ void SDLGame::Init(Renderer* p_pRenderer)
 	}
 
 	m_pPhysicsSpace->SetContactListener(this);
-	
+
 
 	m_pTestSection = new Level();
 	m_pTestSection->Init(p_pRenderer, m_pPhysicsSpace);
@@ -129,34 +131,63 @@ void SDLGame::Update(float p_DeltaTime)
 	b2Vec2 _Vel = TestBody->GetLinearVelocity();
 	_Vel.x = 0;
 
-	if (WaterOverlapCount > 0)
+	if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_G))
 	{
-		_Vel.y *= 0.9f;
 		if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_W))
 		{
-			_Vel.y -= 0.5f;
+			_Vel.y = -10.0f;
 		}
-	}
+		if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_S))
+		{
+			_Vel.y = 10.0f;
+		}
 
-	if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_D))
+		
+
+		if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_D))
+		{
+			_Vel.x = 15;
+		}
+
+		if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_A))
+		{
+			_Vel.x = -15;
+		}
+
+	}
+	else
 	{
-		_Vel.x = 3;
-	}
 
-	if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_A))
-	{
-		_Vel.x = -3;
-	}
 
-	if (Input::IsKeyPressed(SDL_Scancode::SDL_SCANCODE_SPACE) && _Vel.y > -0.1f &&_Vel.y < 0.1f)
-	{
-		_Vel.y = -8;
-	}
+		if (WaterOverlapCount > 0)
+		{
+			_Vel.y *= 0.9f;
+			if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_W))
+			{
+				_Vel.y -= 0.5f;
+			}
+		}
 
+		if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_D))
+		{
+			_Vel.x = 3;
+		}
+
+		if (Input::IsKeyDown(SDL_Scancode::SDL_SCANCODE_A))
+		{
+			_Vel.x = -3;
+		}
+
+		if (Input::IsKeyPressed(SDL_Scancode::SDL_SCANCODE_SPACE) && _Vel.y > -0.1f &&_Vel.y < 0.1f)
+		{
+			_Vel.y = -8;
+		}
+
+	}
 
 	TestBody->SetLinearVelocity(_Vel);
 
-	m_pTestSection->Update(p_DeltaTime);
+	m_pTestSection->Update(p_DeltaTime, TestBody->GetPosition().x , TestBody->GetPosition().y);
 }
 
 void SDLGame::Draw(Renderer* p_pRenderer)
